@@ -4,28 +4,35 @@
   <meta charset="UTF-8" />
   <title>North Pine Meadow Holdings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="LDH North Pine Meadow Holdings, LLC is a privately held holding company for cash-flow e-commerce ventures and long-term real-asset positions." />
+  <meta
+    name="description"
+    content="LDH North Pine Meadow Holdings, LLC is a privately held family holding company for cash-flow e-commerce ventures and future real-asset positions rooted in the Pacific Northwest."
+  />
   <style>
     :root {
       color-scheme: dark;
-      --bg-overlay: rgba(4, 9, 18, 0.6);
-      --card-bg: rgba(6, 12, 24, 0.96);
+      --bg-overlay: rgba(4, 9, 18, 0.35);
+      --card-bg: rgba(16, 20, 28, 0.88);
+      --card-border: rgba(255, 255, 255, 0.06);
       --accent: #9fd6a8;
       --muted: #9fb0c6;
       --text: #f5f7fb;
       --text-soft: #c3cfdd;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
       color: var(--text);
       background-color: #05070b;
       background-image:
-        linear-gradient(to bottom, var(--bg-overlay), rgba(3, 6, 12, 0.9)),
+        linear-gradient(to bottom, var(--bg-overlay), rgba(3, 6, 12, 0.75)),
         url("./north-pine-meadow-bg.png");
       background-size: cover;
       background-position: center;
@@ -42,11 +49,44 @@
     }
 
     .card {
+      position: relative;
+      overflow: hidden;
       padding: 2.1rem 2.0rem 1.9rem;
       border-radius: 18px;
-      background: var(--card-bg);
+      background:
+        /* subtle brushed-metal gradient */
+        linear-gradient(135deg,
+          rgba(255, 255, 255, 0.16),
+          rgba(255, 255, 255, 0.02)),
+        /* optional metal texture image (upload as card-bg-metal.png) */
+        url("./card-bg-metal.png") center/cover no-repeat;
+      background-color: var(--card-bg); /* fallback if texture missing */
+      border: 1px solid var(--card-border);
       box-shadow: 0 26px 60px rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(10px);
+    }
+
+    /* soft highlight gives a “brushed / machined” feel */
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.35),
+        rgba(255, 255, 255, 0.0) 26%,
+        rgba(255, 255, 255, 0.0) 74%,
+        rgba(255, 255, 255, 0.12)
+      );
+      opacity: 0.4;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
     }
 
     .eyebrow {
@@ -71,7 +111,7 @@
     }
 
     h1 {
-      margin: 0 0 0.2rem;
+      margin: 0 0 0.15rem;
       font-size: 1.8rem;
       letter-spacing: 0.03em;
     }
@@ -123,40 +163,52 @@
         padding: 1.8rem 1.4rem 1.6rem;
         border-radius: 16px;
       }
-      h1 { font-size: 1.55rem; }
-      h2 { font-size: 0.9rem; }
+
+      h1 {
+        font-size: 1.55rem;
+      }
+
+      h2 {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <section class="card" aria-label="North Pine Meadow overview">
-      <div class="eyebrow">
-        <span class="dot"></span>
-        LDH North Pine Meadow Holdings, LLC
-      </div>
-
-      <h1>North Pine Meadow</h1>
-      <h2>Quiet, long-view ownership.</h2>
-
-      <p>
-        Privately held holding company for cash-flow e-commerce ventures and, over time, select real-asset positions
-        rooted in the Pacific Northwest.
-      </p>
-
-      <p>
-        We are not currently raising outside capital. For banking, legal, or partnership inquiries, contact
-        <a href="mailto:operations@northpinemeadow.com">operations@northpinemeadow.com</a>.
-      </p>
-
-      <div class="meta">
-        <div>
-          <div class="label">Domicile</div>
-          Oregon, United States
+      <div class="content">
+        <div class="eyebrow">
+          <span class="dot"></span>
+          LDH North Pine Meadow Holdings, LLC
         </div>
-        <div>
-          <div class="label">Focus</div>
-          E-commerce cash flow &amp; long-term holdings
+
+        <h1>North Pine Meadow</h1>
+        <h2>Family-owned, built for generations.</h2>
+
+        <p>
+          Privately held family holding company for cash-flow e-commerce
+          ventures and future real-asset positions rooted in the Pacific
+          Northwest.
+        </p>
+
+        <p>
+          We are not accepting outside capital. For information, banking, or
+          legal inquiries, please contact
+          <a href="mailto:operations@northpinemeadow.com">
+            operations@northpinemeadow.com
+          </a>.
+        </p>
+
+        <div class="meta">
+          <div>
+            <div class="label">Domicile</div>
+            Oregon, United States
+          </div>
+          <div>
+            <div class="label">Focus</div>
+            E-commerce cash flow &amp; long-term holdings
+          </div>
         </div>
       </div>
     </section>
