@@ -1,79 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>North Pine Meadow</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>North Pine Meadow Holdings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LDH North Pine Meadow Holdings, LLC is a privately held holding company building durable e-commerce brands and long-term real asset investments." />
   <style>
     :root {
       color-scheme: dark;
+      --bg-overlay: rgba(4, 9, 18, 0.74);
+      --card-bg: rgba(6, 12, 24, 0.96);
+      --accent: #9fd6a8;
+      --muted: #9fb0c6;
+      --text: #f5f7fb;
+      --text-soft: #c3cfdd;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background-color: #05070b;
+      background-image:
+        linear-gradient(to bottom, var(--bg-overlay), rgba(3, 6, 12, 0.96)),
+        url("north-pine-meadow-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at top, #1d2a3a 0, #05070b 55%, #020308 100%);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #f5f7fb;
+      padding: 1.5rem;
     }
+
+    main {
+      width: 100%;
+      max-width: 540px;
+    }
+
     .card {
-      max-width: 480px;
-      padding: 2.5rem 2.25rem;
+      padding: 2.5rem 2.25rem 2.1rem;
       border-radius: 18px;
-      background: rgba(4, 9, 18, 0.92);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
+      background: var(--card-bg);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
     }
-    .tag {
-      display: inline-block;
-      padding: 0.2rem 0.75rem;
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.22rem 0.8rem;
       border-radius: 999px;
-      background: #121a25;
-      color: #9fb0c6;
+      background: rgba(10, 20, 32, 0.9);
+      color: var(--muted);
       font-size: 0.7rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
       margin-bottom: 1rem;
     }
+
+    .eyebrow span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      margin-right: 0.45rem;
+    }
+
     h1 {
-      font-size: 1.7rem;
       margin: 0 0 0.25rem;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
     }
+
     h2 {
-      font-size: 0.9rem;
-      margin: 0 0 1.5rem;
-      color: #8ea3c0;
+      margin: 0 0 1.4rem;
+      font-size: 0.95rem;
       font-weight: 500;
+      color: var(--muted);
     }
+
     p {
       margin: 0 0 1.0rem;
-      line-height: 1.55;
-      color: #c3cfdd;
+      line-height: 1.6;
+      color: var(--text-soft);
+      font-size: 0.9rem;
     }
+
+    .meta {
+      margin-top: 1.25rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(94, 117, 146, 0.4);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(174, 189, 208, 0.95);
+      margin-bottom: 0.25rem;
+    }
+
     a {
-      color: #7fd1ff;
+      color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 2.0rem 1.5rem 1.7rem;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 1.55rem;
+      }
+
+      h2 {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <div class="tag">LDH North Pine Meadow Holdings, LLC</div>
-    <h1>North Pine Meadow</h1>
-    <h2>Quietly building long-term online ventures.</h2>
+  <main>
+    <section class="card" aria-label="North Pine Meadow company overview">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        LDH North Pine Meadow Holdings, LLC
+      </div>
 
-    <p>
-      North Pine Meadow is an Oregon-based holding company for e-commerce brands
-      and future real-estate projects.
-    </p>
-    <p>
-      For legal, banking, or partnership inquiries, contact
-      <a href="mailto:operations@northpinemeadow.com">operations@northpinemeadow.com</a>.
-    </p>
+      <h1>Quiet, long-view ownership.</h1>
+      <h2>Privately held holding company building durable online ventures and, over time, real-asset investments rooted in the Pacific Northwest.</h2>
+
+      <p>
+        North Pine Meadow focuses on operating and acquiring cash-flow e-commerce brands, with a future mandate to add select real-estate and other
+        long-duration assets. We prioritize simple structures, conservative leverage, and time horizons measured in decades.
+      </p>
+
+      <p>
+        We are not currently raising outside capital. For banking, legal, or partnership inquiries, please contact:
+        <a href="mailto:operations@northpinemeadow.com">operations@northpinemeadow.com</a>.
+      </p>
+
+      <div class="meta">
+        <div>
+          <div class="label">Domicile</div>
+          Oregon, United States
+        </div>
+        <div>
+          <div class="label">Focus</div>
+          E-commerce cash flow &amp; future real-asset holdings
+        </div>
+        <div>
+          <div class="label">Status</div>
+          Private, single-member holding company
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
